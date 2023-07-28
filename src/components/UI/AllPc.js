@@ -26,7 +26,7 @@ const AllPc = ({ allPc }) => {
         }}
       >
         {allPc?.map((pc) => (
-          <Col key={pc._id} className="gutter-row" span={8}>
+          <Col key={pc.id} className="gutter-row" span={8}>
             <Card
               hoverable
               style={{
@@ -76,7 +76,7 @@ const AllPc = ({ allPc }) => {
               <p style={{ fontSize: "15px" }}>
                 {pc?.status ? "In Stock" : "Out Stock"}
               </p>
-              <Link href={`/pc/${pc?._id}`}>
+              <Link href={`/pcAll/${pc?.id}`}>
                 <p
                   style={{
                     fontSize: "15px",

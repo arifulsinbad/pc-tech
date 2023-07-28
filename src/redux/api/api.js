@@ -9,7 +9,7 @@ export const apiSlice = createApi({
       query: () => "/allPc",
     }),
     getPc: builder.query({
-      query: (id) => `/allPc${id}`,
+      query: (id) => `/allPc/${id}`,
     }),
   }),
 });
