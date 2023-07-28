@@ -14,67 +14,67 @@ import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 
 const RootLayout = ({ children }) => {
-  // const onClick = ({ key }) => {
-  //   message.info(`Click on item ${key}`);
-  // };
-  // const items = [
-  //   {
-  //     label: (
-  //       <p>
-  //         <Link href={"/processor"}>CPU / Processor</Link>
-  //       </p>
-  //     ),
-  //     key: "1",
-  //   },
-  //   {
-  //     label: (
-  //       <p>
-  //         <Link href={"/motherboard"}>Motherboard</Link>
-  //       </p>
-  //     ),
-  //     key: "2",
-  //   },
-  //   {
-  //     label: (
-  //       <p>
-  //         <Link href={"/ram"}>RAM</Link>
-  //       </p>
-  //     ),
-  //     key: "3",
-  //   },
-  //   {
-  //     label: (
-  //       <p>
-  //         <Link href={"/powerSupply"}>Power Supply Unit</Link>
-  //       </p>
-  //     ),
-  //     key: "4",
-  //   },
-  //   {
-  //     label: (
-  //       <p>
-  //         <Link href={"/storage"}>Storage Device</Link>
-  //       </p>
-  //     ),
-  //     key: "5",
-  //   },
-  //   {
-  //     label: (
-  //       <p>
-  //         <Link href={"/monitor"}>Monitor</Link>
-  //       </p>
-  //     ),
-  //     key: "6",
-  //   },
-  //   {
-  //     label: (
-  //       <p>
-  //         <Link href={"/others"}>Others</Link>
-  //       </p>
-  //     ),
-  //     key: "7",
-  //   },
-  // ];
+  const onClick = ({ key }) => {
+    message.info(`Click on item ${key}`);
+  };
+  const items = [
+    {
+      label: (
+        <p>
+          <Link href={"/catagory/processors"}>CPU / Processor</Link>
+        </p>
+      ),
+      key: "1",
+    },
+    {
+      label: (
+        <p>
+          <Link href={"/motherboard"}>Motherboard</Link>
+        </p>
+      ),
+      key: "2",
+    },
+    {
+      label: (
+        <p>
+          <Link href={"/ram"}>RAM</Link>
+        </p>
+      ),
+      key: "3",
+    },
+    {
+      label: (
+        <p>
+          <Link href={"/powerSupply"}>Power Supply Unit</Link>
+        </p>
+      ),
+      key: "4",
+    },
+    {
+      label: (
+        <p>
+          <Link href={"/storage"}>Storage Device</Link>
+        </p>
+      ),
+      key: "5",
+    },
+    {
+      label: (
+        <p>
+          <Link href={"/monitor"}>Monitor</Link>
+        </p>
+      ),
+      key: "6",
+    },
+    {
+      label: (
+        <p>
+          <Link href={"/others"}>Others</Link>
+        </p>
+      ),
+      key: "7",
+    },
+  ];
   return (
     <Layout>
       <Header
@@ -100,13 +100,18 @@ const RootLayout = ({ children }) => {
         </div>
         <Menu theme="dark" mode="vertical" className={styles.menu_items}>
           <Link href="/allNews">
-            <items>
+            <span>
               <ProfileOutlined />
               All PC
-            </items>
+            </span>
           </Link>
-          <Link href="/about">
-            {/* <Dropdown
+
+          <span
+            style={{
+              padding: "0 50px",
+            }}
+          >
+            <Dropdown
               menu={{
                 items,
                 onClick,
@@ -118,8 +123,9 @@ const RootLayout = ({ children }) => {
                   <DownOutlined />
                 </Space>
               </a>
-            </Dropdown> */}
-          </Link>
+            </Dropdown>
+          </span>
+
           <Link href="/contact">
             <Button>
               <MobileOutlined />
