@@ -2,7 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["live.staticflickr.com"],
+    domains: [
+      "live.staticflickr.com",
+      "img.freepik.com",
+      "www.startech.com.bd",
+      "www.mediastorehouse.co.uk",
+    ],
   },
 };
 
