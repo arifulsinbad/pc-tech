@@ -195,32 +195,421 @@
     {
       "id": 1,
       "name": "Intel Core i9-11900K",
-      "socket": "LGA1200",
-      "cores": 8,
-      "threads": 16,
-      "clockSpeed": "3.5 GHz",
+      "rating": "4",
+      "catagory": "Processor",
+      "status": true,
       "price": 450,
-      "image_url": "https://example.com/images/intel_core_i9_11900k.jpg"
+      "description": [
+        "Intel Core i9-11900K",
+        "Processor",
+        " Base Clock Speed 3.2GHz",
+        " Package AM4",
+
+        "PCI Express PCIe 3.0"
+      ],
+      "image": "https://img.freepik.com/free-vector/realistic-microchip-processor-background_23-2148886011.jpg"
     },
     {
       "id": 2,
       "name": "AMD Ryzen 7 5800X",
-      "socket": "AM4",
-      "cores": 8,
-      "threads": 16,
-      "clockSpeed": "3.8 GHz",
-      "price": 400,
-      "image_url": "https://example.com/images/amd_ryzen_7_5800x.jpg"
+      "rating": "4.5",
+      "catagory": "Processor",
+      "status": false,
+      "price": 450,
+      "description": [
+        "AMD Ryzen 7 5800X",
+        "Processor",
+        " Base Clock Speed 3.2GHz",
+        " Package AM4",
+
+        "PCI Express PCIe 3.0"
+      ],
+      "image_url": "https://img.freepik.com/free-vector/realistic-microchip-processor-background_23-2148886011.jpg"
     },
     {
       "id": 3,
       "name": "Intel Core i5-11600K",
-      "socket": "LGA1200",
-      "cores": 6,
-      "threads": 12,
-      "clockSpeed": "3.9 GHz",
+      "rating": "4.5",
+      "catagory": "Processor",
+      "status": true,
+
+      "description": [
+        "Intel Core i5-11600K",
+        "Processor",
+        " Base Clock Speed 3.9GHz",
+        " Package AM4",
+
+        "PCI Express PCIe 3.0"
+      ],
       "price": 280,
-      "image_url": "https://example.com/images/intel_core_i5_11600k.jpg"
+      "image_url": "https://img.freepik.com/free-vector/realistic-microchip-processor-background_23-2148886011.jpg"
+    }
+  ],
+  "ram": [
+    {
+      "id": 1,
+      "name": "Netac Basic DDR3 4GB 1600MHZ Desktop RAM",
+      "rating": "4.5",
+      "catagory": "Ram",
+      "status": true,
+
+      "description": [
+        "Netac Basic DDR3 4GB 1600MHZ Desktop RAM",
+
+        "Capacity: 4GB",
+        "Frequency: DDR3 1600MHz ",
+
+        "Form Factor: 240-Pin UDIMM",
+        "Voltage & Cas Latency: 1.5V/11-11-11-28"
+      ],
+      "price": 1500,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/ram/netac/basic-ddr3-4gb-1600mhz/basic-ddr3-4gb-1600mhz-01-228x228.webp"
+    },
+    {
+      "id": 2,
+      "name": "TwinMOS 4GB DDR4 2400MHz Desktop RAM",
+      "rating": "4",
+      "catagory": "Ram",
+      "status": false,
+
+      "description": [
+        "TwinMOS 4GB DDR4 2400MHz Desktop RAM",
+
+        "Capacity: 4GB",
+        "TwinMOS 4GB DDR4 2400MHz Desktop RAM ",
+
+        "TwinMOS 4GB DDR4 2400MHz Desktop RAM",
+        "Voltage & Cas Latency: 1.5V/11-11-11-28"
+      ],
+      "price": 2250,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/RAM/TwinMOS/TwinMOS%204GB%20DDR4%202400-228x228.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Crucial 4GB Single DDR4 2666MHz Desktop RAM",
+      "rating": "4",
+      "catagory": "Ram",
+      "status": true,
+
+      "description": [
+        "Crucial 4GB Single DDR4 2666MHz Desktop RAM",
+
+        "4GB 2666MHz DDR4 RAM ",
+        "CAS Latency: 19  ",
+
+        "Number of Pin: 288 Pin ",
+        "Voltage: 1.2v"
+      ],
+      "price": 3350,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/ram/crucial/4gb-ddr4-2666mhz/4gb-ddr4-2666mhz-1-228x228.jpg"
+    }
+  ],
+  "powerSupplies": [
+    {
+      "id": 1,
+      "name": "OVO OPS-P4 450W ATX Power Supply",
+      "rating": "3",
+      "catagory": "Power Supply",
+      "status": true,
+
+      "description": [
+        "OVO OPS-P4 450W ATX Power Supply",
+
+        "Capacity: 450 Watt  ",
+        "Fan Size: 120mm",
+
+        "Form Factor: ATX ",
+        "Input Voltage: 50 - 60Hz"
+      ],
+      "price": 1000,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/power-supply/ovo/ops-p4-450w/ops-p4-450w-02-228x228.webp"
+    },
+    {
+      "id": 2,
+      "name": "Revenger VP 350 Watt Power Supply",
+      "rating": "4",
+      "catagory": "Power Supply",
+      "status": false,
+
+      "description": [
+        "Revenger VP 350 Watt Power Supply",
+
+        "Continues Power: 350W  ",
+        "Fan: 120 mm",
+
+        "Super ventilation",
+        "Input Voltage: 50 - 60Hz"
+      ],
+      "price": 1040,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/power-supply/revenger/vp-350/vp-350-01-228x228.webp"
+    },
+    {
+      "id": 3,
+      "name": " Gamdias AURA GP550 550W Power Supply",
+      "rating": "5",
+      "catagory": "Power Supply",
+      "status": true,
+
+      "description": [
+        "Gamdias AURA GP550 550W Power Supply",
+
+        "550W power supply ",
+        "120mm silent fan",
+
+        "1x 24-pin main connecter  ",
+        "Compatible with ATX12V v2.4"
+      ],
+      "price": 1170,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/power-supply/gamdias/aura-gp550/aura-gp550-01-228x228.webp"
+    }
+  ],
+  "storage": [
+    {
+      "id": 1,
+      "name": "Dahua C800 120GB 2.5 SATA SSD",
+      "rating": "4.2",
+      "catagory": "Storage",
+      "status": true,
+
+      "description": [
+        " Dahua C800 120GB 2.5 SATA SSD",
+
+        "MPN: DHI-SSD-C800AS120G ",
+        "Model: C800",
+
+        "Interface: SATA 6Gb/s, Form Factor: 2.5 ",
+        "Sequential R/W: Up to 550 MB/s Up to 460 MB/s ",
+        "Adopts high-quality wafer level chip MTBF: 1,500,000 hours"
+      ],
+      "price": 3000,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/dahua/c800/c800-01-500x500.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Seagate Barracuda 2TB HDD",
+      "rating": "4.2",
+      "catagory": "Storage",
+      "status": false,
+
+      "description": [
+        "Seagate Barracuda 2TB HDD",
+
+        "MPN: DHI-SSD-C800AS120G ",
+        "Model: C800",
+
+        "Interface: SATA 6Gb/s, Form Factor: 2.5 ",
+        "Sequential R/W: Up to 550 MB/s Up to 460 MB/s ",
+        "Adopts high-quality wafer level chip MTBF: 1,500,000 hours"
+      ],
+      "price": 2000,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/netac/ls-ne-sa500/ls-ne-sa500-01-228x228.webp"
+    },
+    {
+      "id": 3,
+      "name": "Western Digital WD Black 1TB NVMe SSD",
+      "rating": "4.2",
+      "catagory": "Storage",
+      "status": true,
+
+      "description": [
+        "Western Digital WD Black 1TB NVMe SSD",
+
+        "MPN: DHI-SSD-C800AS120G ",
+        "Model: C800",
+
+        "Interface: SATA 6Gb/s, Form Factor: 2.5 ",
+        "Sequential R/W: Up to 550 MB/s Up to 460 MB/s ",
+        "Adopts high-quality wafer level chip MTBF: 1,500,000 hours"
+      ],
+      "price": 1307,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/pny/cs900/cs900-228x228.jpg"
+    }
+  ],
+  "motherboards": [
+    {
+      "id": 1,
+      "name": "AFOX Intel H81 4th Gen Processor Supported Motherboard",
+      "rating": "4.2",
+      "catagory": "Motherboard",
+      "status": true,
+
+      "description": [
+        "Intel® Socket 1150",
+
+        "Supports Intel® Socket 1150 Core™ i7/i5/i3/Pentium®/ Celeron®  ",
+        "Dual Channel DDR3 1333/1600MHz Memory, up to 16GB",
+
+        "Integrated Graphics Processor",
+        "4 x SATA II port "
+      ],
+      "price": 5000,
+      "image_url": "https://www.mediastorehouse.co.uk/p/173/computer-motherboard-coloured-x-ray-c016-7212-9217559.jpg.webp"
+    },
+    {
+      "id": 2,
+      "name": "AFOX H61 2nd & 3rd Gen Intel Processor Supported Motherboard",
+      "rating": "4",
+      "catagory": "Motherboard",
+      "status": false,
+
+      "description": [
+        "AFOX H61 2nd & 3rd Gen Intel Processor Supported Motherboard",
+
+        "Supports Intel® Socket 1155 Core™ i7/ i5/ i3 processors  ",
+        "Dual Channel DDR3 800/1066/1333/1600MHz ",
+
+        "Integrated Intel® GMA X4500 graphics ",
+        "4 x SATA II port  "
+      ],
+      "price": 4400,
+      "image_url": "https://www.mediastorehouse.co.uk/p/173/computer-motherboard-coloured-x-ray-c016-7212-9217559.jpg.webp"
+    },
+    {
+      "id": 3,
+      "name": "Gigabyte B450M S2H AMD Processor Motherboard",
+      "rating": "4",
+      "catagory": "Motherboard",
+      "status": true,
+
+      "description": [
+        "Gigabyte B450M S2H AMD Processor Motherboard",
+
+        "Model: B450M S2H  ",
+        "CPU Support: AMD RyzenTM/ AthlonTM Series Processors ",
+
+        "CPU Socket: Socket AM4 ",
+        "Chipset: AMD B450 Chipset.  ",
+        "Graphics Interface* : 1*PCle 3.0 x 16 Display Interface*: HDMI, DVI-D, D-Sub Memory Type: Dual-Channel DDR4"
+      ],
+      "price": 10000,
+      "image_url": "https://www.mediastorehouse.co.uk/p/173/computer-motherboard-coloured-x-ray-c016-7212-9217559.jpg.webp"
+    }
+  ],
+  "monitors": [
+    {
+      "id": 1,
+      "name": "E-MO-A01 19-inch HD LED Backlit Monitor",
+      "rating": "4.2",
+      "catagory": "Monitor",
+      "status": true,
+
+      "description": [
+        "E-MO-A01 19-inch HD LED Backlit Monitor",
+
+        "Model: E-MO-A01",
+        "Resolution: (1440 x 900) HD ",
+
+        "Display: 60Hz, 5ms ",
+        "Ports: VGA, HDMI  ",
+        "Features: Flicker-Free"
+      ],
+      "price": 3000,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/monitor/enter/e-mo-a01/e-mo-a01-01-500x500.webp"
+    },
+    {
+      "id": 2,
+      "name": "HP V20 19.5 HD+ LED TN Monitor",
+      "rating": "4.2",
+      "catagory": "Monitor",
+      "status": false,
+
+      "description": [
+        "HP V20 19.5 HD+ LED TN Monitor",
+
+        "MPN: 1H849AA",
+        "Model: V20",
+
+        "Resolution: HD (1600 x 900)  ",
+        "Display: TN, 60Hz, 5ms  ",
+        "Ports: HDMI, VGA "
+      ],
+      "price": 10000,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/v20/v20-500x500.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Dahua LM22-B200S 21.45'' FHD Monitor",
+      "rating": "4.2",
+      "catagory": "Monitor",
+      "status": true,
+
+      "description": [
+        "Dahua LM22-B200S 21.45'' FHD Monitor ",
+
+        "Model: LM22-B200S",
+        "Display: VA, 75Hz, 5ms  ",
+
+        "Ports: 1x HDMI, 1x VGA ",
+        "Features: Built-in 2x 1W Speaker ",
+        "Resolution: FHD (1920×1080)"
+      ],
+      "price": 7000,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/monitor/dahua/lm22-b200s/lm22-b200s-01-500x500.webp"
+    }
+  ],
+
+  "others": [
+    {
+      "id": 1,
+      "name": "MSI GT 710 1GD3H LP 1GB DDR3 Graphics Card",
+      "rating": "4.2",
+      "catagory": "Graphics Card",
+      "status": true,
+
+      "description": [
+        "MSI GT 710 1GD3H LP 1GB DDR3 Graphics Card ",
+
+        "Model: GT 710 1GD3H LP",
+        "Memory: 1GB DDR3 1600 MHz   ",
+
+        "Boost Clock: 954 MHz  ",
+        "Interface: PCI Express 2.0 x16 (uses x8)  ",
+        "Output: HDMI x 1, Dual-link DVI-D x 1, D-Sub x 1"
+      ],
+      "price": 8000,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/graphics-card/msi/gt-710-1gd3h-lp/gt-710-1gd3h-lp-01-500x500.webp"
+    },
+
+    {
+      "id": 2,
+      "name": "PROLiNK PMC1007 USB Optical Mouse",
+      "rating": "4.2",
+      "catagory": "Mouse",
+      "status": true,
+
+      "description": [
+        "PROLiNK PMC1007 USB Optical Mouse ",
+
+        "MPN: PMC1007-BLU",
+        "Model: PMC1007 ",
+
+        "Number of buttons: 3  ",
+        "DPI Resolution: 1200 DPI  ",
+        "DPI Resolution: 1200 DPI "
+      ],
+      "price": 700,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/mouse/prolink/pmc1007/pmc1007-dark-blue-01-500x500.webp"
+    },
+
+    {
+      "id": 3,
+      "name": "Redragon A101W Keyboard Keycaps",
+      "rating": "4.5",
+      "catagory": "Keyboard",
+      "status": true,
+
+      "description": [
+        "Redragon A101W Keyboard Keycaps",
+
+        "Model: A101W",
+        "104 pcs of high-quality replacement keys  ",
+
+        "Mount type: Cherry MX key switch style ",
+        "Double-shot injection molded keycaps ",
+        "Key puller included for easy key removal"
+      ],
+      "price": 790,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/keyboard/redragon/a101w/a101w-1-500x500.jpg"
     }
   ]
 }
