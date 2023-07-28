@@ -15,7 +15,7 @@ import Link from "next/link";
 
 const RootLayout = ({ children }) => {
   const onClick = ({ key }) => {
-    message.info(`Click on item ${key}`);
+    // message.info(`Click on item ${key}`);
   };
   const items = [
     {
@@ -29,7 +29,7 @@ const RootLayout = ({ children }) => {
     {
       label: (
         <p>
-          <Link href={"/catagory/motherboard"}>Motherboard</Link>
+          <Link href={"/catagory/motherboards"}>Motherboard</Link>
         </p>
       ),
       key: "2",
@@ -45,7 +45,7 @@ const RootLayout = ({ children }) => {
     {
       label: (
         <p>
-          <Link href={"/catagory/powerSupply"}>Power Supply Unit</Link>
+          <Link href={"/catagory/powerSupplies"}>Power Supply Unit</Link>
         </p>
       ),
       key: "4",
@@ -61,7 +61,7 @@ const RootLayout = ({ children }) => {
     {
       label: (
         <p>
-          <Link href={"/catagory/monitor"}>Monitor</Link>
+          <Link href={"/catagory/monitors"}>Monitor</Link>
         </p>
       ),
       key: "6",

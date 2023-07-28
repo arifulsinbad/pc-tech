@@ -1,5 +1,4 @@
 import RootLayout from "@/components/Layouts/RootLayout";
-import { useGetCatagoryQuery } from "@/redux/api/api";
 
 import { useRouter } from "next/router";
 import { ArrowRightOutlined } from "@ant-design/icons";
@@ -7,12 +6,14 @@ import { Card, Col, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useGetCatagoryQuery } from "@/redux/api/api";
 
 const CatagoryItem = () => {
   const router = useRouter();
+
   const { data } = useGetCatagoryQuery(router.query.catagoryId);
   const { Meta } = Card;
-  console.log(data);
+
   return (
     <>
       <h1
@@ -32,7 +33,7 @@ const CatagoryItem = () => {
           lg: 32,
         }}
       >
-        {allPc?.map((pc) => (
+        {data?.map((pc) => (
           <Col key={pc.id} className="gutter-row" span={8}>
             <Card
               hoverable
@@ -42,7 +43,7 @@ const CatagoryItem = () => {
               }}
               cover={
                 <Image
-                  src={pc?.image}
+                  src={pc?.image_url}
                   height={200}
                   width={500}
                   layout="responsive"
@@ -50,7 +51,7 @@ const CatagoryItem = () => {
                 />
               }
             >
-              <Meta title={pc.model} />
+              <Meta title={pc.name} />
               <div
                 className="line"
                 style={{
@@ -78,12 +79,12 @@ const CatagoryItem = () => {
                   Rating:
                   {pc?.rating}
                 </span>
-                <span>Catagory: PC</span>
+                <span>Catagory: {pc?.catagory}</span>
               </p>
               <p style={{ fontSize: "15px" }}>
                 {pc?.status ? "In Stock" : "Out Stock"}
               </p>
-              <Link href={`/pcAll/${pc?.id}`}>
+              <Link href={`/catagory/${router.query.catagoryId}/${pc?.id}`}>
                 <p
                   style={{
                     fontSize: "15px",

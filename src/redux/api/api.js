@@ -11,6 +11,9 @@ export const apiSlice = createApi({
     getCatagory: builder.query({
       query: (id) => `/${id}`,
     }),
+    getCatagoryId: builder.query({
+      query: (quary) => `/${quary[0]}/${quary[1]}`,
+    }),
     getPc: builder.query({
       query: (id) => `/allPc/${id}`,
     }),
@@ -19,5 +22,9 @@ export const apiSlice = createApi({
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetAllPcQuery, useGetPcQuery, useGetCatagoryQuery } =
-  apiSlice;
+export const {
+  useGetAllPcQuery,
+  useGetPcQuery,
+  useGetCatagoryQuery,
+  useGetCatagoryIdQuery,
+} = apiSlice;
