@@ -1,4 +1,8 @@
 import RootLayout from "@/components/Layouts/RootLayout";
+import Banner from "@/components/UI/Banner";
+import AllPc from "@/components/UI/AllPc";
+
+import { useGetAllPcQuery } from "@/redux/api/api";
 import Head from "next/head";
 import React from "react";
 
@@ -9,7 +13,15 @@ const HomePage = () => {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.ico" />
   </Head>;
-  return <div></div>;
+  const { data } = useGetAllPcQuery();
+  console.log(data);
+
+  return (
+    <div>
+      <Banner></Banner>
+      <AllPc allPc={data}></AllPc>
+    </div>
+  );
 };
 
 export default HomePage;

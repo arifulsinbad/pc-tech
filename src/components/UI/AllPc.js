@@ -1,9 +1,4 @@
-import {
-  ArrowRightOutlined,
-  CalendarOutlined,
-  CommentOutlined,
-  ProfileOutlined,
-} from "@ant-design/icons";
+import { ArrowRightOutlined } from "@ant-design/icons";
 import { Card, Col, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,16 +25,17 @@ const AllPc = ({ allPc }) => {
           lg: 32,
         }}
       >
-        {allpc?.map((pc) => (
-          <Col key={pc.id} className="gutter-row" span={6}>
+        {allPc?.map((pc) => (
+          <Col key={pc._id} className="gutter-row" span={8}>
             <Card
               hoverable
               style={{
                 width: "100%",
+                margin: "20px 0px",
               }}
               cover={
                 <Image
-                  src={pc?.image_url}
+                  src={pc?.image}
                   height={200}
                   width={500}
                   layout="responsive"
@@ -47,7 +43,7 @@ const AllPc = ({ allPc }) => {
                 />
               }
             >
-              <Meta title={pc.title} />
+              <Meta title={pc.model} />
               <div
                 className="line"
                 style={{
@@ -68,22 +64,17 @@ const AllPc = ({ allPc }) => {
                 }}
               >
                 <span>
-                  <CalendarOutlined />
-                  {pc?.release_date}
+                  Price:
+                  {pc?.price}
                 </span>
                 <span>
-                  <CommentOutlined />
-                  {pc?.comment_count}
+                  Rating:
+                  {pc?.rating}
                 </span>
-                <span>
-                  <ProfileOutlined />
-                  {pc?.category}
-                </span>
+                <span>Catagory: PC</span>
               </p>
               <p style={{ fontSize: "15px" }}>
-                {pc?.description.length > 100
-                  ? pc?.description.slice(0, 70) + "..."
-                  : pc?.description}
+                {pc?.status ? "In Stock" : "Out Stock"}
               </p>
               <Link href={`/pc/${pc?._id}`}>
                 <p

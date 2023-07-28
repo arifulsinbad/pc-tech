@@ -14,39 +14,67 @@ import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 
 const RootLayout = ({ children }) => {
-  const onClick = ({ key }) => {
-    message.info(`Click on item ${key}`);
-  };
-  const items = [
-    {
-      label: <Link href={"/processor"}>CPU / Processor</Link>,
-      key: "1",
-    },
-    {
-      label: <Link href={"/motherboard"}>Motherboard</Link>,
-      key: "2",
-    },
-    {
-      label: <Link href={"/ram"}>RAM</Link>,
-      key: "3",
-    },
-    {
-      label: <Link href={"/powerSupply"}>Power Supply Unit</Link>,
-      key: "4",
-    },
-    {
-      label: <Link href={"/storage"}>Storage Device</Link>,
-      key: "5",
-    },
-    {
-      label: <Link href={"/monitor"}>Monitor</Link>,
-      key: "6",
-    },
-    {
-      label: <Link href={"/others"}>Others</Link>,
-      key: "7",
-    },
-  ];
+  // const onClick = ({ key }) => {
+  //   message.info(`Click on item ${key}`);
+  // };
+  // const items = [
+  //   {
+  //     label: (
+  //       <p>
+  //         <Link href={"/processor"}>CPU / Processor</Link>
+  //       </p>
+  //     ),
+  //     key: "1",
+  //   },
+  //   {
+  //     label: (
+  //       <p>
+  //         <Link href={"/motherboard"}>Motherboard</Link>
+  //       </p>
+  //     ),
+  //     key: "2",
+  //   },
+  //   {
+  //     label: (
+  //       <p>
+  //         <Link href={"/ram"}>RAM</Link>
+  //       </p>
+  //     ),
+  //     key: "3",
+  //   },
+  //   {
+  //     label: (
+  //       <p>
+  //         <Link href={"/powerSupply"}>Power Supply Unit</Link>
+  //       </p>
+  //     ),
+  //     key: "4",
+  //   },
+  //   {
+  //     label: (
+  //       <p>
+  //         <Link href={"/storage"}>Storage Device</Link>
+  //       </p>
+  //     ),
+  //     key: "5",
+  //   },
+  //   {
+  //     label: (
+  //       <p>
+  //         <Link href={"/monitor"}>Monitor</Link>
+  //       </p>
+  //     ),
+  //     key: "6",
+  //   },
+  //   {
+  //     label: (
+  //       <p>
+  //         <Link href={"/others"}>Others</Link>
+  //       </p>
+  //     ),
+  //     key: "7",
+  //   },
+  // ];
   return (
     <Layout>
       <Header
@@ -78,25 +106,19 @@ const RootLayout = ({ children }) => {
             </items>
           </Link>
           <Link href="/about">
-            <items
-              style={{
-                margin: "0px 25px",
+            {/* <Dropdown
+              menu={{
+                items,
+                onClick,
               }}
             >
-              <Dropdown
-                menu={{
-                  items,
-                  onClick,
-                }}
-              >
-                <a onClick={(e) => e.preventDefault()}>
-                  <Space>
-                    Featured Category
-                    <DownOutlined />
-                  </Space>
-                </a>
-              </Dropdown>
-            </items>
+              <a onClick={(e) => e.preventDefault()}>
+                <Space>
+                  Featured Category
+                  <DownOutlined />
+                </Space>
+              </a>
+            </Dropdown> */}
           </Link>
           <Link href="/contact">
             <Button>

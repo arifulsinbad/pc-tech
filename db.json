@@ -28,63 +28,7 @@
         { "cooler": "Gamdias Boreas M1-610 ARGB CPU Cooler" }
       ]
     },
-    {
-      "_id": "642b953200c6496abd4e8186",
-      "model": "",
-      "image": null,
-      "status": false,
-      "keyFeature": ["", "", "", ""],
-      "price": "",
-      "rating": null,
-      "spec": [
-        { "processor": "Intel Core i3-10100 10th Gen Processor" },
-        {
-          "motherboard": "MSI H510M-A PRO Intel 10th Gen and 11th Gen Mirco-ATX Motherboard"
-        },
-        { "ram": "TEAM ELITE PLUS RED 8GB 2666MHz DDR4 RAM" },
-        {
-          "graphics": "GIGABYTE GeForce GT 730 2GB DDR3 PCI EXPRESS Graphics Card"
-        },
-        { "storage": "Toshiba P300 1TB Desktop PC Internal Hard Drive" },
-        { "casing": "Revenger A1 Mid Tower RGB ATX Gaming Case" },
-        { "psu": "Antec Atom V450 Non-Modular IN SMPS Gaming Power Supply" }
-      ],
-      "brand": "amd",
-      "date": "2023-04-04"
-    },
-    {
-      "_id": "642b953200c6496abd4e8187",
-      "model": "AMD Ryzen 5 3600 Gaming PC",
-      "image": "https://live.staticflickr.com/65535/52522855818_98bdd4c07a_o.jpg",
-      "status": true,
-      "keyFeature": [
-        "MSI B450 TOMAHAWK MAX AM4 AMD ATX Motherboard (China)",
-        "128GB SSD + 16GB 3200MHz RAM + 1TB HDD",
-        "AMD Ryzen 5 3600 Processor",
-        "ZOTAC GAMING GTX 1660 SUPER 6GB Twin Fan Graphics Card"
-      ],
-      "price": 84400,
-      "rating": 5,
-      "spec": [
-        { "processor": "AMD Ryzen 5 3600 Processor" },
-        {
-          "motherboard": "MSI B450 TOMAHAWK MAX AM4 AMD ATX Motherboard (China)"
-        },
-        {
-          "ram": "Team T-Force VULCAN Z Red 8GB DDR4 3200MHz Desktop Gaming RAM- 2 unit"
-        },
-        {
-          "graphics": "ZOTAC GAMING GeForce GTX 1660 SUPER 6GB GDDR6 Twin Fan Graphics Card"
-        },
-        {
-          "storage": "Team MP33 128GB M.2 PCIe SSD Western Digital 1TB Blue Desktop HDD"
-        },
-        {
-          "casing": "Xtreme XJOGOS 200-22 RGB Mid Tower Black ATX Gaming Casing"
-        },
-        { "psu": "Antec CUPRUM STRIKE CSK 650W 80 Plus Bronze Power Supply" }
-      ]
-    },
+
     {
       "_id": "642b953200c6496abd4e8188",
       "model": "Gaming PC 10th Gen Core i5-10400f",
@@ -245,26 +189,6 @@
         { "psu": "Antec HCG-750 Gold Series 750W Full Modular Power Supply" },
         { "cooler": "Antec Prizm X 120 ARGB 3+C Cooling Fan" }
       ]
-    },
-    {
-      "_id": "642b966c0bf90483a6452f4f",
-      "date": "2023-04-04",
-      "model": "Dell",
-      "brand": "amd",
-      "status": false,
-      "price": "5555",
-      "keyFeature": ["wdwd", "wdwdw", "jkkl kln lkn ", "jbbibuibui"],
-      "spec": []
-    },
-    {
-      "_id": "642b969c0bf90483a6452f50",
-      "date": "2023-04-04",
-      "model": "",
-      "brand": "intel",
-      "status": true,
-      "price": "5555",
-      "keyFeature": ["wdwd", "wdwdw", "jkkl kln lkn ", "wdwdw"],
-      "spec": []
     }
   ]
 }
