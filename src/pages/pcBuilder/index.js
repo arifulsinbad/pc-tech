@@ -53,6 +53,7 @@ const data = [
     quary: "storage",
   },
 ];
+
 const pcBuider = () => {
   return (
     <div>
