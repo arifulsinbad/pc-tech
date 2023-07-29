@@ -15,6 +15,7 @@
     "antd": "^5.7.3",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
+    "firebase": "^10.1.0",
     "json-server": "^0.17.3",
     "next": "13.4.12",
     "next-auth": "^4.22.3",

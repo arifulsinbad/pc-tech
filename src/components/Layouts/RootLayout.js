@@ -7,12 +7,13 @@ import {
   GoogleSquareFilled,
   TwitterSquareFilled,
   DownOutlined,
+  LoginOutlined,
 } from "@ant-design/icons";
 import { Button, Dropdown, Layout, Menu, Space } from "antd";
 const { Header, Content, Footer } = Layout;
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
-
+import { useSession, signOut } from "next-auth/react";
 const RootLayout = ({ children }) => {
   const onClick = ({ key }) => {
     // message.info(`Click on item ${key}`);
@@ -75,6 +76,7 @@ const RootLayout = ({ children }) => {
       key: "7",
     },
   ];
+  const { data: session } = useSession();
   return (
     <Layout>
       <Header
@@ -99,12 +101,20 @@ const RootLayout = ({ children }) => {
           </h1>
         </div>
         <Menu theme="dark" mode="vertical" className={styles.menu_items}>
-          <Link href="/allNews">
-            <span>
-              <ProfileOutlined />
-              All PC
-            </span>
-          </Link>
+          {session?.user ? (
+            <items>
+              <Button onClick={() => signOut()} type="primary" danger>
+                Logout
+              </Button>
+            </items>
+          ) : (
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              href="/login"
+            >
+              <items>Login</items>
+            </Link>
+          )}
 
           <span
             style={{
