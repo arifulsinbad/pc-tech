@@ -136,7 +136,7 @@ const RootLayout = ({ children }) => {
             </Dropdown>
           </span>
 
-          <Link href="/contact">
+          <Link href="/pcBuilder">
             <Button>
               <MobileOutlined />
               Pc Builder
