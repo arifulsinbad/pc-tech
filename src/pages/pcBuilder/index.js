@@ -21,7 +21,45 @@ const data = [
     title: "Processor",
     image: cpu,
     quary: "processors",
-    catagory: "Processor",
+    require: "Required",
+  },
+
+  {
+    title: "Monitor",
+    image: monitor,
+    quary: "monitors",
+    require: "Required",
+  },
+  {
+    title: "Motherboard",
+    image: motherboard,
+    quary: "motherboards",
+    require: "Required",
+  },
+
+  {
+    title: "Power Supply",
+    image: powerSupplies,
+    quary: "powerSupplies",
+    require: "Required",
+  },
+  {
+    title: "Ram",
+    image: ram,
+    quary: "ram",
+    require: "Required",
+  },
+  {
+    title: "Storage",
+    image: storage,
+    quary: "storage",
+    require: "Required",
+  },
+  {
+    title: "Graphics Card",
+    image:
+      "https://www.startech.com.bd/image/cache/catalog/graphics-card/msi/gt-710-1gd3h-lp/gt-710-1gd3h-lp-01-500x500.webp",
+    quary: "others",
   },
   {
     title: "Keyboard",
@@ -29,40 +67,15 @@ const data = [
     quary: "others",
   },
   {
-    title: "Monitor",
-    image: monitor,
-    quary: "monitors",
-  },
-  {
-    title: "Motherboard",
-    image: motherboard,
-    quary: "motherboards",
-  },
-  {
     title: "Mouse",
     image: mouse,
     quary: "others",
-  },
-  {
-    title: "Power Supply",
-    image: powerSupplies,
-    quary: "powerSupplies",
-  },
-  {
-    title: "Ram",
-    image: ram,
-    quary: "ram",
-  },
-  {
-    title: "Storage",
-    image: storage,
-    quary: "storage",
   },
 ];
 
 const pcBuider = () => {
   const { cart, total } = UseSelector((state) => state.cart);
-  const dispatch = UseDispatch();
+  const dispatch = UseDispatch(null);
 
   return (
     <div>
@@ -77,7 +90,7 @@ const pcBuider = () => {
           span={24}
         >
           <h4 style={{ marginRight: "15%" }}>Total Price : {total}</h4>
-          {cart.length >= 7 && (
+          {cart.length >= 6 && (
             <Button type="primary" danger>
               COMPELATE
             </Button>
@@ -108,23 +121,25 @@ const pcBuider = () => {
                     <p>
                       <CheckOutlined style={{ color: "green" }} />{" "}
                       {cart.description}
-                      <span
-                        onClick={() => dispatch(removeToCart(cart))}
-                        style={{
-                          margin: "0px 10px",
-                          color: "red",
-                          fontSize: "20px",
-                          backgroundColor: "ButtonFace",
-                        }}
-                      >
-                        <CloseOutlined />
-                      </span>
+                      {cart.catagory === item.title && (
+                        <span
+                          onClick={() => dispatch(removeToCart(cart))}
+                          style={{
+                            margin: "0px 10px",
+                            color: "red",
+                            fontSize: "20px",
+                            backgroundColor: "ButtonFace",
+                          }}
+                        >
+                          <CloseOutlined />
+                        </span>
+                      )}
                     </p>
                   )}
                 </ul>
               ))}
             />
-
+            <p style={{ backgroundColor: "greenyellow" }}>{item.require}</p>
             <Link href={`/catagory/${item.quary}`}>
               <Button>Choose</Button>
             </Link>

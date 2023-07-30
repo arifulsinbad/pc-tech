@@ -30,10 +30,12 @@ const cartSlice = createSlice({
       }
     },
     removeToCart: (state, action) => {
-      state.cart = state.cart.filter(
-        (cart) => cart.catagory !== action.payload.catagory
-      );
-      state.total -= action.payload.price;
+      if (state.cart.length >= 1) {
+        state.cart = state.cart.filter(
+          (cart) => cart.catagory !== action.payload.catagory
+        );
+        state.total -= action.payload.price;
+      }
     },
   },
 });
