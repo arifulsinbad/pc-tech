@@ -11,9 +11,10 @@ import ram from "@/assets/pc/ram.png";
 import storage from "@/assets/pc/storage.jpg";
 import Image from "next/image";
 import Link from "next/link";
-import { useDispatch, useSelector } from "react-redux";
+
 import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 import { removeToCart } from "@/redux/features/cart/cartSlice";
+import { UseDispatch, UseSelector } from "@/redux/hook";
 
 const data = [
   {
@@ -60,8 +61,8 @@ const data = [
 ];
 
 const pcBuider = () => {
-  const { cart, total } = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
+  const { cart, total } = UseSelector((state) => state.cart);
+  const dispatch = UseDispatch();
 
   return (
     <div>

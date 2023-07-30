@@ -1,38 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PC_TECH
 
-## Getting Started
+### Description
 
-First, run the development server:
+My project using :{
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. next js
+2. React Redux
+3. Ant Design
+4. Eslint
+5. NextAuth
+6. Json-server
+7. etc
+   }
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Web site details
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+My web site name is pc-tech. Do you use this web. Home page you can see navbar, header, and map this compelate pc build product section, last section footer.
+my project using Authentication google provider and github provider.Do you using authentication , you can see navbar login button that click this button and select this provider .
+You can using catagory selection. Fist do you see navbar features catagory dropdown button click and select catagory.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+My web site you can pc build. First Do you see navbar button and select Pc Builder button click and see this page . This page can see catagory item and choose this catagory item and see this new page catagory item section and add this click button next work pc builder page and compelate this require item that success pc build .you can see details catagory item page first you click card image and see this details catagory item.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+etc....
