@@ -7,10 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useGetCatagoryQuery } from "@/redux/api/api";
+import { useDispatch } from "react-redux";
+import { addToCard } from "@/redux/features/cart/cartSlice";
 
 const CatagoryItem = () => {
   const router = useRouter();
-
+  const dispatch = useDispatch();
   const { data } = useGetCatagoryQuery(router.query.catagoryId);
   const { Meta } = Card;
 
@@ -42,13 +44,15 @@ const CatagoryItem = () => {
                 margin: "20px 0px",
               }}
               cover={
-                <Image
-                  src={pc?.image_url}
-                  height={200}
-                  width={500}
-                  layout="responsive"
-                  alt="pc image"
-                />
+                <Link href={`/catagory/${router.query.catagoryId}/${pc?.id}`}>
+                  <Image
+                    src={pc?.image_url}
+                    height={200}
+                    width={500}
+                    layout="responsive"
+                    alt="pc image"
+                  />
+                </Link>
               }
             >
               <Meta title={pc.name} />
@@ -84,23 +88,24 @@ const CatagoryItem = () => {
               <p style={{ fontSize: "15px" }}>
                 {pc?.status ? "In Stock" : "Out Stock"}
               </p>
-              <Link href={`/catagory/${router.query.catagoryId}/${pc?.id}`}>
-                <p
-                  style={{
-                    fontSize: "15px",
-                    marginTop: "20px",
-                    backgroundColor: "black",
-                    color: "white",
-                    width: "100%",
-                    padding: "2px 5px",
-                    fontWeight: "300",
-                    letterSpacing: "3px",
-                    textAlign: "center",
-                  }}
-                >
-                  Keep Reading <ArrowRightOutlined />
-                </p>
-              </Link>
+              {/* <Link href=""> */}
+              <p
+                onClick={() => dispatch(addToCard(pc))}
+                style={{
+                  fontSize: "15px",
+                  marginTop: "20px",
+                  backgroundColor: "black",
+                  color: "white",
+                  width: "100%",
+                  padding: "2px 5px",
+                  fontWeight: "300",
+                  letterSpacing: "3px",
+                  textAlign: "center",
+                }}
+              >
+                Add <ArrowRightOutlined />
+              </p>
+              {/* </Link> */}
             </Card>
           </Col>
         ))}
