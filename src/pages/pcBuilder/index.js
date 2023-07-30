@@ -11,7 +11,9 @@ import ram from "@/assets/pc/ram.png";
 import storage from "@/assets/pc/storage.jpg";
 import Image from "next/image";
 import Link from "next/link";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
+import { removeToCart } from "@/redux/features/cart/cartSlice";
 
 const data = [
   {
@@ -58,10 +60,39 @@ const data = [
 ];
 
 const pcBuider = () => {
-  const { cart } = useSelector((state) => state.cart);
+  const { cart, total } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
   return (
     <div>
+      <Row>
+        <Col
+          style={{
+            display: "flex",
+            justifyContent: "end",
+
+            paddingTop: "30px",
+          }}
+          span={24}
+        >
+          <h4 style={{ marginRight: "15%" }}>Total Price : {total}</h4>
+          {cart.length >= 7 && (
+            <Button type="primary" danger>
+              COMPELATE
+            </Button>
+          )}
+        </Col>
+      </Row>
+      <div
+        className="line"
+        style={{
+          height: "5px",
+          margin: "20px 0px",
+          background: "#000",
+          width: "100%",
+        }}
+      ></div>
+
       <List
         itemLayout="horizontal"
         dataSource={data}
@@ -72,7 +103,23 @@ const pcBuider = () => {
               title={<a href="https://ant.design">{item.title}</a>}
               description={cart.map((cart) => (
                 <ul key={cart.id}>
-                  {cart.catagory === item.title && <p>{cart.description}</p>}
+                  {cart.catagory === item.title && (
+                    <p>
+                      <CheckOutlined style={{ color: "green" }} />{" "}
+                      {cart.description}
+                      <span
+                        onClick={() => dispatch(removeToCart(cart))}
+                        style={{
+                          margin: "0px 10px",
+                          color: "red",
+                          fontSize: "20px",
+                          backgroundColor: "ButtonFace",
+                        }}
+                      >
+                        <CloseOutlined />
+                      </span>
+                    </p>
+                  )}
                 </ul>
               ))}
             />
